@@ -1,0 +1,13 @@
+{% extends 'admin/base_site.html' %}
+{% block header %}
+<h1><a href="/admin/">Course Administration</a></h1>
+{% endblock %}
+{% block content %}
+<h1>Statistics of Course Information</h1>
+<h2>Number of Courses: {{ course_count }}</h2>
+<ul>
+    {% for s in stats %}
+    <li><strong>{{s.subject}}</strong> có {{ s.lesson_count }} bài học </li>
+    {% endfor %}
+</ul>
+{% endblock %}
